@@ -220,11 +220,36 @@ img.emoji {
 	<h2>Medical Analytics in an Open Cloud</h2>
 <p><img src="../../files/2018/06/project-banner_chris.png" alt="project-banner_chris" class="aligncenter size-full wp-image-981" width="100%" height="300" /></p>
 <h3>Overview</h3>
-<p>ChRIS is an open source framework that utilizes cloud technologies to democratize medical analytics application development and enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS uses Docker/containers, Kubernetes/OpenShift, and a set of other technologies to standardize healthcare application development. An instance of ChRIS is already deployed over Boston Children’s Hospital (BCH) and Massachusetts Open Cloud (MOC), and it is possible to develop medical analytics plugins to be embedded into the BCH-MOC deployment. This deployment was recently highlighted in a keynote at the Red Hat summit (<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a><span>,</span><a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a><span>,</span><a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span></a><span>,</span><a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span></a><span>) with over seven thousand people in attendance.</span></p>
-<h3>Motivation</h3>
-<figure id="attachment927" style="width: 859px" class="wp-caption alignright"><a href="../../files/2017/11/image4.png"><img src="../../files/2017/11/image4-849x1024.png" class="wp-image-927 size-large" width="849" height="1024" srcset="../../files/2017/11/image4-849x1024.png 849w, ../../files/2017/11/image4-527x636.png 527w, ../../files/2017/11/image4-768x927.png 768w, ../../files/2017/11/image4.png 910w" sizes="(max-width: 849px) 100vw, 849px" /></a><figcaption class="wp-caption-text">Figure 1: Overall workflow for ChRIS (ChRIS Research Integration Service). ChRIS is an open source cloud/web-based platform that allows for (currently) medical image (e.g. MRI) processing, interacting with hospital data sources (currently only PACS) to collect data and public cloud offerings to process the data, orchestrating data transfers and processing pipelines. It offers mechanisms for visualizing the results and collaborating with other researchers.</figcaption></figure>
-<p>Medicine will be transformed by analytics on massive collections of medical data! Hospitals are limited computationally, companies are promoting cloud based data solutions for hospitals that lock out researchers and startups, and sharing of data with these organizations raise ethical concerns about medical data being controlled and exploited by these companies. In Boston, we have the opportunity to leverage our high concentration of world-class hospitals, computational resources and startups to pioneer this transformation in a way that leaves hospitals in control of their own data. We propose creating a regional hub where hospital data can be stored and shared and where tightly coupled computation services allow rapid Big Data analytics on that data. This hub will reduce hospital costs for secure storage and computation, simplify collaboration and democratize healthcare application development, and provide startups access to data while providing hospitals continued control over their data and value (e.g. revenue) for the data they choose to share.</p>
-<p>We are pooling our efforts to achieve the above-mentioned goals around the ChRIS Research Integration Service (ChRIS) framework. ChRIS is an infrastructure that initially started as an open source project at the Boston Children’s Hospital (BCH) to enable clinicians and researchers at BCH to extract data from the hospital Picture Archiving and Communication System (PACS) and securely perform analytics using high performance computing systems. With MOC-BCH-RH partnership, ChRIS infrastructure has been re-engineered, healthcare analytics application development using ChRIS has been standardized to use containers, support for third-party application development has been added along with the integration of an application/plugin hub, and ChRIS turned into a cloud service that can store data in object stores and execute computation on cloud systems.</p>
+<p>ChRIS is a pervasively open source framework that utilizes cloud technologies to democratize medical analytics application development and enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS allows researchers the ability to simply deploy the same application they have already developed in a cloud infrastructure with access to more data, more compute, and more collaboration to drive medical innovation. ChRIS uses Docker/containers, Kubernetes/OpenShift, and a set of other technologies to standardize healthcare application development. An instance of ChRIS is already deployed over Boston Children’s Hospital (BCH) and Massachusetts Open Cloud (MOC), and it is possible to develop medical analytics plugins to be embedded into the BCH-MOC deployment. This deployment was recently highlighted in two recent keynotes at the Red Hat summit (<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a><span>,</span><a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a><span>,</span><a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span></a><span>,</span><a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span></a><span>) with over seven thousand people in attendance.</span></p>
+
+<h3>Public Good</h3>
+
+<p>
+	In an age where data and analytics leads a new gold rush with a plethora of companies (from Facebook, to Google, the Microsoft, to dozens of AI-based startups) trying to stake their claim, where more and more of our lives are impacted by computing, maintaining open source, open standards and open platforms becomes fundamentally important. Certain types of data carry tremendous potential for public good -- in particular medical data and the operations on medical data. The ChRIS platform not only exists at the forefront of this new computing landscape as it leverages the latest infrastructure developments, but crucially it represents a completely open platform with transparent design and standards where anyone, from researchers, to developers, to clinicians, to patients can access, see, and analyze medical data. There is no vendor lock in, no confusing privacy. ChRIS strives to provide the infrastucure to guarantee open data and compute in medical data processing and analytics and so keep innovation in the public good.
+</p>
+
+<p> 
+	While medicine stands to be transformed by analysis on massive collections of digital data, hospitals themselves are being left behind -- both in terms of access to computation and in terms of understanding the forefront of computing. Companies are promoting cloud based data solutions for hospitals that lock out researchers and startups, and sharing of data with these organizations raise ethical concerns about medical data being controlled and exploited by these companies.</p>
+<p>	
+	In Boston, we have the opportunity to leverage our high concentration of world-class hospitals, computational resources and committment to public good to pioneer this transformation in a way that is focused on the larger public good, in a way that leaves hospitals and patients in control of their own data and which encourages innovation in computation on this data. We propose a technical solution for creating a regional hub where hospital data can be stored and shared and where tightly coupled computation services allow rapid Big Data analytics on that data. This hub will reduce hospital costs for secure storage and computation, simplify collaboration and democratize healthcare application development, and provide startups access to data while providing hospitals continued control over their data and value (e.g. revenue) for the data they choose to share.</p>
+
+
+<h3>Architecture</h3>
+<p><figure>
+	<img src="../../files/2019/11/image4.png" alt="architecture-banner_chris" class="aligncenter size-full wp-image-981" width="100%" height="300" /></p>
+	<figcaption class="wp-caption-text">Figure 1: Overall architecture for ChRIS (ChRIS Research Integration Service). ChRIS is an open source cloud/web-based platform that allows for hyrbid cloud compute. ChRIS applications (or <ti>plugins</ti>) exist in several compute environments (either on premise or remotely on cloud services). The platform manages and coordinates the flow of data from, for example, protected data sources (like a hospital image database - PACS) to a remote environment (like the MOC - Massachusetts Open Cloud). ChRIS orchestrates data transfer, preserves privacy, and manages containerized pipelines. It offers mechanisms for visualizing the results and collaborating with other researchers.
+	</figure>
+<!-- <figure id="attachment927" style="width: 859px" class="wp-caption alignright"><a href="../../files/2019/11/image4.png"><img src="../../files/2019/11/image4-849x1024.png" class="wp-image-927 size-large" width="849" height="1024" srcset="../../files/2017/11/image4-849x1024.png 849w, ../../files/2017/11/image4-527x636.png 527w, ../../files/2017/11/image4-768x927.png 768w, ../../files/2017/11/image4.png 910w" sizes="(max-width: 849px) 100vw, 849px" /></a><figcaption class="wp-caption-text">Figure 1: Overall workflow for ChRIS (ChRIS Research Integration Service). ChRIS is an open source cloud/web-based platform that allows for (currently) medical image (e.g. MRI) processing, interacting with hospital data sources (currently only PACS) to collect data and public cloud offerings to process the data, orchestrating data transfers and processing pipelines. It offers mechanisms for visualizing the results and collaborating with other researchers.</figcaption></figure> -->
+<p>
+	ChRIS is an infrastructure that initially started as an open source research project at the <a href="http://www.childrenshospital.org/">Boston Children’s Hospital (BCH)</a> <a href = "https:fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a> to allow clinicians better access to the latest developments in research software innovation, particularly software that analyzes image data such as MRIs and X-Rays. Clinicians are focused on results, but research software with the latest potential can be difficult to use and run. Indeed, no matter how great a new tool is, if it is not used, it provides little benefit. ChRIS grew to bridge that gap between clinical need and software reality -- first to simplify clinician's access to advanced software, but also to allow other software developers and researchers the ability to innovate on new data.</p>
+
+<p>
+	As the platform grew, it became a powerfully simple way to extract data from the hospital Picture Archiving and Communication System (PACS) and securely perform advanced analytics using high performance computing systems within BCH. Inevitably, though, the research and development team at BCH hit a scaling bottleneck - a small team can only do so much. To keep growing, ChRIS needed to expand outside its home base, with more collaboration and more participating partners. </p>
+
+<p>
+	Enter the MOC-BCH-RH partnership, in which ChRIS infrastructure has been completely re-engineered, healthcare analytics application development using ChRIS has been standardized to use containers, support for third-party application development has been added along with the integration of an application/plugin hub, and ChRIS turned into a cloud service that can store data in object stores and execute computation on cloud systems.
+</p>
+
 <figure id="attachment928" style="width: 1034px" class="wp-caption alignright"><a href="../../files/2017/11/image3.png"><img src="../../files/2017/11/image3-1024x530.png" alt="Diagram: ChRIS architecture from MOC side" class="wp-image-928 size-large" width="1024" height="530" srcset="../../files/2017/11/image3-1024x530.png 1024w, ../../files/2017/11/image3-636x329.png 636w, ../../files/2017/11/image3-768x398.png 768w, ../../files/2017/11/image3.png 1522w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption class="wp-caption-text">Figure 2: Current ChRIS architecture from the MOC (public cloud) side with details of the spinned containers for execution indicated. A medical image processing request initiated via the ChRIS UI from the Boston Children&#8217;s Hospital (BCH) side is processed at the Massachusetts Open Cloud (MOC) OpenShift cluster (which sits on top of an OpenStack deployment). To separate application (image plugin) development from the intricacies of data management, we wrap image processing plugins between init and publish containers that handle interactions with the object store (Swift). This way, plugin developers can think and program as if their application is storing data to a regular file system, while in reality the data is stored in an object store (Swift) in a scalable manner.</figcaption></figure>
 <p>We plan to leverage the momentum behind the BCH, Red Hat, and MOC collaboration by integrating the following projects into ChRIS and use ChRIS as the founding block of our regional hub visions:</p>
 <ul>
@@ -237,8 +262,61 @@ img.emoji {
 <p><span>Collaborators in different institutions will be able to use Conclave to perform analysis that spans multiple datasets, with the guarantee that patient information is never exposed to other parties and only the aggregated output is available to one or more identified parties. Medical startups will similarly be able be to request computation (as allowed by the hospitals) performed in enclaves controlled by the institutions but charged to the startups. Technology startups will be able to expose new algorithms, new hardware, and new services to the hospitals and have them integrated into the hospital controlled enclaves. The complex workflows to orchestrate all of this would be integrated into ChRIS, enabling researchers and clinicians that are not computer experts to take advantage of these new capabilities.</span></p>
 <figure id="attachment930" style="width: 879px" class="wp-caption alignright"><a href="../../files/2017/11/image1.png"><img src="../../files/2017/11/image1.png" alt="Diagram: trusted, secure, private computation in the cloud" class="wp-image-930 size-full" width="869" height="670" srcset="../../files/2017/11/image1.png 869w, ../../files/2017/11/image1-636x490.png 636w, ../../files/2017/11/image1-768x592.png 768w" sizes="(max-width: 869px) 100vw, 869px" /></a><figcaption class="wp-caption-text">Figure 4: Detailed workflow for performing trusted, secure, privacy-preserving computation over multiple datasets owned by multiple non-trusting entities using the Trustworthy Computation Framework being built on top of MOC. The framework ensures that the datasets are only processed on trusted enclaves, original data is never shared, and only the aggregated data is available to parties at the end of the computation.</figcaption></figure>
 <h3>Collaboration with Red Hat</h3>
-<p>Red Hat (RH) engineers started mentoring class projects around ChRIS in the second half of 2016, and RH became part of the project in 2017. RH views the ChRIS project as a high-profile showcasing opportunity to demonstrate the capabilities of the latest developments made on RH software. Deep RH expertise around containers/Docker/OCI, Kubernetes/OpenShift, container management/orchestration and open source community building made an immensely positive impact on the ChRIS project. We organized a very successful Hackathon to develop applications on ChRIS in March 2018 at RH Boston Office and the project was highlighted in a keynote at the Red Hat summit in San Francisco (<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a><span>,</span><a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a><span>,</span><a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span></a><span>,</span><a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span></a><span>). The interest around the project is growing quickly especially around the hospital research organizations and a core reason for this growth is the open-source nature of ChRIS. </span></p>
-<h2>Project Team</h2>
+<p>
+	Red Hat (RH) engineers started mentoring class projects around ChRIS in the second half of 2016, and RH became part of the project in 2017. RH views the ChRIS project as a high-profile showcasing opportunity to demonstrate the capabilities of the latest developments made on RH software. Deep RH expertise around containers/Docker/OCI, Kubernetes/OpenShift, container management/orchestration and open source community building made an immensely positive impact on the ChRIS project. We organized a very successful Hackathon to develop applications on ChRIS in March 2018 at RH Boston Office and the project was highlighted in two successive keynotes at the the annual Red Hat summits in San Francisco in 2018 and Boston in 2019 (
+	<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a>
+	<span>,</span>
+	<a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a>
+	<span>,</span>
+	<a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span>
+	</a><span>,</span>
+	<a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span>
+	</a><span>,</span>
+	<a href="https://www.youtube.com/watch?v=e3QJjLwVwQo"><span>5</span>
+	</a><span>,</span>
+	<a href="https://www.youtube.com/watch?v=FUu4kMc0PL8&feature=youtu.be&t=3802"><span>6</span>
+	</a><span>
+	). 
+	The interest around the project is growing quickly especially around the hospital research organizations and a core reason for this growth is the open-source nature of ChRIS. </span></p>
+
+	<h2>Project Team</h2>
+
+	<h4><span>Boston Children's Hospital Team</span></h4>
+
+	<div class="profile-listing">
+		<ul class="advanced">
+							
+<li class="has-title">
+	<a href="https://fnndsc.org/people">
+	<figure><img width="150" height="150" src="../../files/2019/11/RudolphPienaar.jpeg" alt="" /></figure>				
+	<p class="profile-name">Rudolph Pienaar</p>
+	<p class="profile-title">Staff Scientist and Technical Director &#8211; Principal ChRIS Architect </p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://fnndsc.org/people">
+	<figure><img width="118" height="150" src="../../files/2019/11/ellengrant.jpg" alt="" /></figure>				
+	<p class="profile-name">Ellen Grant</p>
+	<p class="profile-title">Staff Clinician, Professor in Radiology at Harvard Medical School</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://fnndsc.org/people">
+	<figure><img width="150" height="150" src="../../files/2019/11/jorge.jpeg" alt="" /></figure>				
+	<p class="profile-name">Jorge Bernal</p>
+	<p class="profile-title">Research Software Engineer &#8211; ChRIS Backend</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://gideonpints.com/portfolio">
+	<figure><img width="150" height="150" src="../../files/2019/11/gideon.jpg" alt="" /></figure>				
+	<p class="profile-name">Gideon Pinto</p>
+	<p class="profile-title">Research Developer  &#8211; ChRIS Frontend</p>	</a>
+</li>
+					</ul>
+	</div><!--/.profile-listing-->
+
+
 <h4><span>Red Hat</span></h4>
 
 	<div class="profile-listing">
@@ -255,7 +333,13 @@ img.emoji {
 					<figure><img width="118" height="150" src="../../files/2018/02/headshot-mo.jpg" alt="" /></figure>				<p class="profile-name">Máirín Duffy</p>
 		<p class="profile-title">Principal Interaction Designer</p>	</a>
 </li>
-							
+
+<li class="has-title">
+		<a href="https://www.bu.edu/rhcollab/people/parul-singh/">
+						<figure><img width="150" height="150" src="../../files/2018/06/parul.jpg" alt="" /></figure>				<p class="profile-name">Parul Singh</p>
+			<p class="profile-title">Software Engineer</p>	</a>
+	</li>
+
 <li class="has-title">
 	<a href="https://www.bu.edu/rhcollab/people/ravi-gudimelta/">
 					<figure><img width="150" height="150" src="../../files/2018/02/user-1.png" alt="" /></figure>				<p class="profile-name">Ravi Gudimelta</p>
@@ -292,13 +376,7 @@ img.emoji {
 					<figure><img width="150" height="150" src="../../files/2018/06/robertbaron.png" alt="" /></figure>				<p class="profile-name">Robert Baron</p>
 		<p class="profile-title">Sr. Software Engineer</p>	</a>
 </li>
-							
-<li class="has-title">
-	<a href="https://www.bu.edu/rhcollab/people/parul-singh/">
-					<figure><img width="150" height="150" src="../../files/2018/06/parul.jpg" alt="" /></figure>				<p class="profile-name">Parul Singh</p>
-		<p class="profile-title">Software Engineer</p>	</a>
-</li>
-							
+														
 <li class="has-title">
 	<a href="https://www.bu.edu/rhcollab/people/ata-turk/">
 					<figure><img width="104" height="150" src="../../files/2018/06/ata_funny-Ata-Turk-441x636.jpeg" alt="" /></figure>				<p class="profile-name">Ata Turk</p>
@@ -326,12 +404,24 @@ img.emoji {
 <li><span><strong>May 2018</strong> – First application demo using GPUs and TensorFlow on ChRIS OpenShift </span></li>
 <li><span><strong>May 2018</strong> – </span><a href="https://youtu.be/Ui-n-n_w8Ok?t=4892"><span>Keynote at Red Hat Summit on CHRIS</span></a><span>: Jim Whitehurst (RH CEO) and Ellen Grant (BCH head of FNNDSC) talking about ChRIS on the main stage</span></li>
 <li><span><strong>May 2018</strong> – </span><a href="https://www.youtube.com/watch?v=p1Y9wlPSgt4"><span>Tech talk at Red Hat Summit on ChRIS</span></a></li>
+
+<li><span><strong>May 2019</strong> – </span><a href="https://www.youtube.com/watch?v=FUu4kMc0PL8&feature=youtu.be&t=3802"><span>Keynote at Red Hat Summit on CHRIS</span></a><span>: Chris Wright talking about new medical frontiers with Ellen Grant (BCH head of FNNDSC)</span></li>
+<li><span><strong>May 2019</strong> – </span><a href="https://www.youtube.com/watch?v=e3QJjLwVwQo"><span>theCUBE interview</a></span></a><span> with Drs Rudolph Pienaar and Ellen Grant at Red Hat summit</span>
+</li>
+
+
 </ul>
 <h3>Timeline</h3>
 <ul>
 <li><span><strong>Sep 2018</strong> – GPU support in ChRIS</span></li>
-<li><span><strong>Oct 2018</strong> – Cloud Dataverse support in ChRIS</span></li>
-<li><span><strong>Dec 2018</strong> – MPC support in ChRIS</span></li>
+<li><span><strong>Oct 2018</strong> – Initial Cloud Dataverse support in ChRIS</span></li>
+<li><span><strong>Dec 2018</strong> – Intial MPC support in ChRIS</span></li>
+<li><span><strong>Jun 2019</strong> – Revamped UI in ChRIS</span></li>
+<li><span><strong>Oct 2019</strong> – Deeper support for the Massachusetts Open Cloud in ChRIS</span></li>
+<li><span><strong>Nov 2019</strong> – Intial IBM Power9 plugin support in ChRIS</span></li>
+<li><span><strong>Dec 2019</strong> – Management of pipelines of containerized processing in ChRIS</span></li>
+
+
 </ul>
 <h2>Other Resources</h2>
 <h3>Planning and Getting Involved</h3>
