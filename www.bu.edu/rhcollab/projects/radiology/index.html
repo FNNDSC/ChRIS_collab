@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie lt-ie9 lt-ie8 lt-ie7"  lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie lt-ie9 lt-ie8"  lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie lt-ie9"  lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ie9"  lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"  lang="en"><!--<![endif]-->
+<!--
+	generated in 0.211 seconds
+	49416 bytes batcached for 360 seconds
+-->
+<head>
+	<title>ChRIS Research Integration Service | Red Hat Collaboratory</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+	<meta http-equiv="ClearType" content="true" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+
+	
+		<meta name="copyright" content="&copy; 2019 Boston University" />
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.bu.edu/rhcollab/xmlrpc.php" />
+	<link rel="apple-touch-icon" href="https://www.bu.edu/rhcollab/wp-content/themes/responsive-framework/icons/apple-touch-icon-precomposed.png"/>
+
+		<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" id="responsi-css"  href="../../wp-content/themes/responsive-framework/style.min.css%3Fver=1.5.9.css" type="text/css" media="all" />
+	<!--<![endif]-->
+	<!--[if (lt IE 9) & (!IEMobile 7)]>
+	<link rel="stylesheet" id="responsi-ie-css"   href="https://www.bu.edu/rhcollab/wp-content/themes/responsive-framework/ie.min.css?ver=1.5.9" type="text/css" media="all" />
+	<![endif]-->
+
+	<style type="text/css" id="responsive-customizer-fonts">@font-face{font-family:"Benton";src:url(../../../cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot);src:url(../../../cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot%3F) format("embedded-opentype"),url(../../../cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-3.woff) format("woff"),url(../../../cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-1.ttf) format("truetype");font-style:normal;font-weight:400;}@font-face{font-family:"Benton";src:url(../../../cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-2.eot);src:url(../../../cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-2.eot%3F) format("embedded-opentype"),url(../../../cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-3.woff) format("woff"),url(../../../cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-1.ttf) format("truetype");font-style:italic;font-weight:400;}@font-face{font-family:"Benton";src:url(../../../cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-2.eot);src:url(../../../cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-2.eot%3F) format("embedded-opentype"),url(../../../cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-3.woff) format("woff"),url(../../../cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-1.ttf) format("truetype");font-style:normal;font-weight:700;}@font-face{font-family:"Benton";src:url(../../../cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-2.eot);src:url(../../../cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-2.eot%3F) format("embedded-opentype"),url(../../../cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-3.woff) format("woff"),url(../../../cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-1.ttf) format("truetype");font-style:italic;font-weight:700;}body{font-family:'Benton';font-weight:400;font-size:16px;line-height:28px;}p{font-family:'Benton';font-weight:400;font-size:16px;line-height:28px;margin-bottom:24px;}h1{font-family:'Benton';font-weight:700;font-size:48px;line-height:51px;margin-bottom:22px;}h2{font-family:'Benton';font-weight:700;font-size:40px;line-height:43px;margin-bottom:22px;}h3{font-family:'Benton';font-weight:700;font-size:33px;line-height:36px;margin-bottom:22px;}.widget h3{font-family:'Benton';font-weight:700;font-size:28px;line-height:31px;}h4{font-family:'Benton';font-weight:700;font-size:22px;line-height:25px;margin-bottom:22px;}h5{font-family:'Benton';font-weight:700;font-size:18px;line-height:21px;margin-bottom:22px;}h6{font-family:'Benton';font-weight:700;font-size:16px;line-height:19px;margin-bottom:22px;}#q{font-family:'Benton';font-size:18px;}.primaryNav-menu li a{font-family:'Benton';font-weight:700;font-size:16px;}.utilityNav li a{font-family:'Benton';font-weight:400;font-size:16px;}</style>
+<style type="text/css" id="responsive-customizer-colors">/* navigation bar and links
+----------------------------------------------------------------- *//* navbar bg color */.l-sideNav .wrapper,.primaryNav,.primaryNav-menu ul{background:#0a0000;}/* main nav and nav border color */.primaryNav-menu a,.searchToggle::before,.l-sideNav .primaryNav-menu a{color:#c9c9c9;border-color:#0a0101;}/* main nav and nav border color */.navToggle span,.navToggle span::before,.navToggle span::after{background-color:#c9c9c9;}/* utility nav color */.l-sideNav .utilityNav a{color:#939393;}/* main nav and utility nav hover color */.primaryNav-menu a:hover,.l-sideNav .utilityNav a:hover,.primaryNav-menu li a.active,.primaryNav-menu li a.active_section,.primaryNav-menu li li a:hover,.primaryNav-menu li li a:focus{color:#f9f9f9;}/* content area
+----------------------------------------------------------------- *//* heading color */.wrapper h1,.wrapper h2,.wrapper h3,.wrapper h4,.wrapper h5,.wrapper h6,.wrapper h1 a,.wrapper h2 a,.wrapper h3 a,.wrapper h4 a,.wrapper h5 a,.wrapper h6 a{color:#000000;}/* text color */body{color:#555555;}/* link color */article a,article a:visited,.widget a,.widget a:hover,.widget a:focus,.event-list .event-link a,.event-list .event-link a:hover,.event-list .event-link a:focus,.monthCalendar td a,.monthCalendar td a:hover,.monthCalendar td,.bu_collapsible:hover:after,.bu_collapsible:focus:after,.bu_collapsible_open .bu_collapsible:hover:after,.bu_collapsible_open .bu_collapsible:focus:after,.profile-listing a .profile-name{color:#0f69d7;}/* link hover color */article a:hover,.widget a:hover,.event-list .event-link a:hover,.monthCalendar td a:hover,{color:#0f69d7;}/* buttons */input[type="submit"],.button,.button-primary,.button-selected,#quicksearch .button,.paging-navigation a,.archiveLink{background:#0f69d7;color:#ffffff;}/* sidebar widget background color
+----------------------------------------------------------------- */.sidebar .widget,.sidebarPosts .widget,.sidebarProfiles .widget{background:#ecf5f9;padding:24px;}/* sidebar area
+----------------------------------------------------------------- *//* widget border color */.sidebar .widgetTitle,.sidebar #contentnav ul,.sidebar .widget_nav_menu ul,.sidebar #contentnav li,.sidebar .widget_nav_menu li,.sidebar .widget-bu-calendar li,.sidebarPosts .widgetTitle,.sidebarPosts #contentnav ul,.sidebarPosts .widget_nav_menu ul,.sidebarPosts #contentnav li,.sidebarPosts .widget_nav_menu li,.sidebarPosts .widget-bu-calendar li,.sidebarProfiles .widgetTitle,.sidebarProfiles #contentnav ul,.sidebarProfiles .widget_nav_menu ul,.sidebarProfiles #contentnav li,.sidebarProfiles .widget_nav_menu li,.sidebarProfiles .widget-bu-calendar li,.monthCalendar,.monthCalendar th,.monthCalendar td{border-color:#000000;}.sidebar .widgetTitle,.sidebar .widget .widgetTitle a,.sidebarPosts .widget .widgetTitle a,.sidebarProfiles .widget .widgetTitle a,.sidebar .widgetTitle a:after,.sidebarPosts .widgetTitle,.sidebarPosts .widgetTitle a:after,.sidebarProfiles .widgetTitle,.sidebarProfiles .widgetTitle a:after{color:#000000;}/* text color */.sidebar .widget,.sidebarPosts .widget,.sidebarProfiles .widget,.monthCalendar th,.monthCalendar caption{color:#555555;}/* link color */.sidebar .widget a,.sidebar #contentnav li a,.sidebar .widget_nav_menu li a,.sidebarPosts .widget a,.sidebarPosts #contentnav li a,.sidebarPosts .widget_nav_menu li a,.sidebarProfiles .widget a,.sidebarProfiles #contentnav li a,.sidebarProfiles .widget_nav_menu li a{color:#0f69d7;}/* link hover color */.sidebar .widget a:hover,.sidebar #contentnav li a:hover,.sidebar .widget_nav_menu li a:hover,.sidebar #contentnav li.current_page_item > a,.sidebar .widget_nav_menu li.current_page_item > a,.sidebarPosts .widget a:hover,.sidebarPosts #contentnav li a:hover,.sidebarPosts .widget_nav_menu li a:hover,.sidebarPosts #contentnav li.current_page_item > a,.sidebarPosts .widget_nav_menu li.current_page_item > a,.sidebarProfiles .widget a:hover,.sidebarProfiles #contentnav li a:hover,.sidebarProfiles .widget_nav_menu li a:hover,.sidebarProfiles #contentnav li.current_page_item > a,.sidebarProfiles .widget_nav_menu li.current_page_item > a{color:#0f69d7;}/* footbar area
+----------------------------------------------------------------- *//* background color */.footbar,.footbar .footbar-container,.bannerContainer-windowWidth{background:#f5f5f5;}/* top border color */.footbar{border-color:#cccccc;}/* widget title color */.footbar .widgetTitle,.footbar .widgetTitle a:after,.footbar h3.widgetTitle a,.footbar .widget-bu-calendar .default a .date,.footbar .widget-bu-calendar .graphic .day,.footbar .widget-bu-calendar .date{color:#000000;}/* border color */.footbar .widgetTitle,.footbar #contentnav ul,.footbar .widget_nav_menu ul,.footbar #contentnav li,.footbar .widget_nav_menu li,.footbar .widget-bu-calendar li{border-color:#000000;}/* link color */.footbar .widget a,.footbar #contentnav li a,.footbar .widget_nav_menu li a{color:#0f69d7;}/* link hover color */.footbar .widget a:hover,.footbar #contentnav li a:hover,.footbar .widget_nav_menu li a:hover{color:#0f69d7;}/* text color */.footbar .widget,.widget-bu-calendar .graphic .month,.widget-bu-posts .meta{color:#555555;}/* non-configurable styles
+----------------------------------------------------------------- */.comment-respond,#quicksearch,.l-sideNav #quicksearch,.message,.single article[role=main] .meta,.singleEvent .dateSummary,.single-profile .profile-info{background:#f5f8ff;border-color:#dfdfea;}/* calendar table */.monthCalendar thead,.monthCalendar th,.monthCalendar .out,.monthCalendar .today{background:rgba(0,0,0,0.15);}</style><link rel='dns-prefetch' href='https://cloud.typography.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.bu.edu\/rhcollab\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+        <style type="text/css">
+            #wpadminbar #wp-admin-bar-my-networks > .ab-item:first-child:before {
+                content: "\f325";
+                top: 3px;
+            }
+        </style>
+        <link rel='stylesheet' id='bu-branding-fonts-css'  href='https://cloud.typography.com/6127692/660644/css/fonts.css?ver=0.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='zotpress.shortcode.css-css'  href='../../wp-content/plugins/zotpress/css/zotpress.shortcode.css%3Fver=4.9.10.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js%3Fver=1.12.4'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='../../wp-content/themes/responsive-framework/js/vendor/modernizer.min.js%3Fver=2.8.3'></script>
+<link rel='https://api.w.org/' href='https://www.bu.edu/rhcollab/wp-json/' />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://www.bu.edu/rhcollab/?p=109' />
+<link rel="alternate" type="application/json+oembed" href="https://www.bu.edu/rhcollab/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bu.edu%2Frhcollab%2Fprojects%2Fradiology%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.bu.edu/rhcollab/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bu.edu%2Frhcollab%2Fprojects%2Fradiology%2F&#038;format=xml" />
+<meta name='last-updated' content='2019-05-14T18:26:01-04:00' />
+
+		<script type="text/javascript">
+			//<![CDATA[
+		function bu_ga_track_pageview(e){var a,t=bu_ga_get_trackers();for(e||(e=void 0),_gaq.push(["_trackPageview",e]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackPageview",e])}function bu_ga_track_event(e){("undefined"==typeof e.value||null===e.value||isNaN(e.value))&&(e.value=0),"undefined"!=typeof e.delay&&null!==e.delay||(e.delay=0),"undefined"!=typeof e.noninteract&&null!==e.noninteract||(e.noninteract=!0),e.value=parseFloat(e.value);var a,t=bu_ga_get_trackers();for(_gaq.push(["_trackEvent",e.category,e.action,e.label,e.value,e.noninteract]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackEvent",e.category,e.action,e.label,e.value,e.noninteract]);e.delay&&setTimeout(function(){return!0},100)}function bu_ga_track_social(e){"undefined"!=typeof e.target&&"null"!=typeof e.target||(e.target=void 0),"undefined"!=typeof e.path&&"null"!=typeof e.path||(e.path=void 0);var a,t=bu_ga_get_trackers();for(_gaq.push(["_trackSocial",e.network,e.action,e.target,e.path]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackSocial",e.network,e.action,e.target,e.path])}function bu_ga_get_trackers(){return"undefined"==typeof buGa||"undefined"==typeof buGa.trackerNames?[]:buGa.trackerNames}function bu_ga_get_tracker(e){if("undefined"==typeof buGa||"undefined"==typeof buGa.trackerIds)return null;if("undefined"==typeof e||"null"==typeof e)return"";var a=buGa.trackerIds;for(var t in a)if(a[t]===e)return"a"===t?"":t;return null}var buGa = {"trackerNames":["b"],"trackerIds":{"a":"UA-124985-1","b":"UA-36737920-1"}};
+
+			var _gaq = _gaq || [];
+
+						_gaq.push(['_setAccount', 'UA-124985-1']);
+			_gaq.push(['_trackPageview']);
+						_gaq.push(['b._setAccount', 'UA-36737920-1']);
+			_gaq.push(['b._trackPageview']);
+						/* begin other trackers */
+			
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			//]]>
+		</script>
+
+		<link rel="stylesheet" id="custom-css-css"  type="text/css" href="../../files/custom.min.css%3F165.css" /></head>
+<body id="top" class="page page-id-109 page-child parent-pageid-107 has-bu-branding l-default sidebarLocation-right page-template-default" >
+
+	<header class="masthead" role="banner">
+		<div class="masthead-container">
+			<div class="brand">
+	<a class="brand-signature has-title brand-container has-parent" href="https://www.bu.edu/rhcollab/" rel="home">
+
+	
+		
+					<span class="brand-part-parent">Hariri Institute for Computing</span>
+		
+		
+	
+	<span class="sitename brand-part-sitename">Red Hat Collaboratory</span>
+
+</a>
+		<p class="site-description brand-site-description"></p>
+</div>
+
+
+<nav class="primaryNav" role="navigation">
+	<a href="index.html#primaryNav-menu" class="navToggle"><span>Menu</span></a>
+
+		<a href="index.html#quicksearch" class="searchToggle"><span>Search</span></a>
+	
+	<ul id="primaryNav-menu" class="primaryNav-menu "><li class="page_item page-item-5">
+<a class="level_1" href="https://www.bu.edu/rhcollab/" title="Navigate to: Home">Home</a>
+ </li>
+<li class="page_item page-item-6">
+<a class="level_1" href="https://www.bu.edu/rhcollab/news/" title="Navigate to: News">News</a>
+ </li>
+<li class="page_item page-item-133">
+<a class="level_1" href="https://www.bu.edu/rhcollab/people/" title="Navigate to: People">People</a>
+ </li>
+<li class="page_item page-item-107 current_page_ancestor current_page_parent">
+<a class="level_1 active_section" href="https://www.bu.edu/rhcollab/projects/" title="Navigate to: Projects">Projects</a>
+ 
+<ul>
+<li class="page_item page-item-190">
+<a class="level_2" href="https://www.bu.edu/rhcollab/projects/d3n/" title="Navigate to: Caching for Datacenters and Data Lakes">Caching for Datacenters and Data Lakes</a>
+ </li>
+<li class="page_item page-item-109 current_page_item">
+<a class="level_2 active" href="index.html" title="Navigate to: ChRIS Research Integration Service">ChRIS Research Integration Service</a>
+ </li>
+<li class="page_item page-item-952">
+<a class="level_2" href="https://www.bu.edu/rhcollab/projects/hil/" title="Navigate to: Hardware Isolation Layer (HIL)">Hardware Isolation Layer (HIL)</a>
+ </li>
+<li class="page_item page-item-947">
+<a class="level_2" href="https://www.bu.edu/rhcollab/projects/malleable-metal-as-a-service-m2/" title="Navigate to: Malleable Metal as a Service (M2)">Malleable Metal as a Service (M2)</a>
+ </li>
+<li class="page_item page-item-898">
+<a class="level_2" href="https://www.bu.edu/rhcollab/projects/linux-unikernels/" title="Navigate to: Linux Unikernels">Linux Unikernels</a>
+ </li>
+<li class="page_item page-item-902">
+<a class="level_2" href="https://www.bu.edu/rhcollab/projects/the-moc-openshift-service/" title="Navigate to: MOC OpenShift Service">MOC OpenShift Service</a>
+ </li>
+
+</ul>
+</li>
+<li class="page_item page-item-208">
+<a class="level_1" href="https://www.bu.edu/rhcollab/events/" title="Navigate to: Events">Events</a>
+ 
+<ul>
+<li class="page_item page-item-1605">
+<a class="level_2" href="https://www.bu.edu/rhcollab/events/microarchitecture-workshop/" title="Navigate to: Microarchitecture Workshop">Microarchitecture Workshop</a>
+ </li>
+<li class="page_item page-item-1410">
+<a class="level_2" href="https://www.bu.edu/rhcollab/events/colloquium-series/" title="Navigate to: Colloquium Series">Colloquium Series</a>
+ </li>
+<li class="page_item page-item-128">
+<a class="level_2" href="https://www.bu.edu/rhcollab/events/calendar/" title="Navigate to: Calendar">Calendar</a>
+ </li>
+<li class="page_item page-item-916">
+<a class="level_2" href="https://www.bu.edu/rhcollab/events/archive/" title="Navigate to: Archive">Archive</a>
+ </li>
+
+</ul>
+</li>
+<li class="page_item page-item-56">
+<a class="level_1" href="https://www.bu.edu/rhcollab/get-involved/" title="Navigate to: Get Involved">Get Involved</a>
+ 
+<ul>
+<li class="page_item page-item-142">
+<a class="level_2" href="https://www.bu.edu/rhcollab/get-involved/opportunities/" title="Navigate to: Opportunities">Opportunities</a>
+ </li>
+<li class="page_item page-item-265">
+<a class="level_2" href="https://www.bu.edu/rhcollab/get-involved/code-repositories/" title="Navigate to: Code Repositories">Code Repositories</a>
+ </li>
+<li class="page_item page-item-1475">
+<a class="level_2" href="https://www.bu.edu/rhcollab/get-involved/subscribe/" title="Navigate to: Mailing List">Mailing List</a>
+ </li>
+<li class="page_item page-item-263">
+<a class="level_2" href="https://www.bu.edu/rhcollab/get-involved/contact-us/" title="Navigate to: Contact Us">Contact Us</a>
+ </li>
+
+</ul>
+</li>
+
+</ul>
+	</nav>
+
+<form role="search" method="get" action="https://search.bu.edu/" id="quicksearch"><fieldset><legend class="screen-reader-text"><span>Search</span></legend><input type="hidden" name="site" value="https://www.bu.edu/rhcollab" ><input type="hidden" name="context" value="site"/>
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input name="q" type="text" aria-label="Search" class="search-field" id="q" placeholder="Search site&hellip;" title="Search for:" />
+				</label><input class="button search-submit" type="submit" name="do_search" value="Search" /></fieldset></form>		</div>
+	</header>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<div class="bannerContainer bannerContainer-windowWidth"><div id="banner-outer" style="height: 100px;"><div id="banner-inner"><h1><strong>Boston University</strong><br id="title-break" /> Red Hat Collaboratory</span></h1></div></div></div>
+			<div class="content-container">
+
+	
+		
+		
+<article role="main" id="post-109" class="post-109 page type-page status-publish hentry page-type-project">
+
+	
+	<h1>ChRIS Research Integration Service</h1>
+	<h2>Medical Analytics in an Open Cloud</h2>
+<p><img src="../../files/2018/06/project-banner_chris.png" alt="project-banner_chris" class="aligncenter size-full wp-image-981" width="100%" height="300" /></p>
+<h3>Overview</h3>
+<p>ChRIS is an open source framework that utilizes cloud technologies to democratize medical analytics application development and enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS uses Docker/containers, Kubernetes/OpenShift, and a set of other technologies to standardize healthcare application development. An instance of ChRIS is already deployed over Boston Children’s Hospital (BCH) and Massachusetts Open Cloud (MOC), and it is possible to develop medical analytics plugins to be embedded into the BCH-MOC deployment. This deployment was recently highlighted in a keynote at the Red Hat summit (<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a><span>,</span><a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a><span>,</span><a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span></a><span>,</span><a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span></a><span>) with over seven thousand people in attendance.</span></p>
+<h3>Motivation</h3>
+<figure id="attachment927" style="width: 859px" class="wp-caption alignright"><a href="../../files/2017/11/image4.png"><img src="../../files/2017/11/image4-849x1024.png" class="wp-image-927 size-large" width="849" height="1024" srcset="../../files/2017/11/image4-849x1024.png 849w, ../../files/2017/11/image4-527x636.png 527w, ../../files/2017/11/image4-768x927.png 768w, ../../files/2017/11/image4.png 910w" sizes="(max-width: 849px) 100vw, 849px" /></a><figcaption class="wp-caption-text">Figure 1: Overall workflow for ChRIS (ChRIS Research Integration Service). ChRIS is an open source cloud/web-based platform that allows for (currently) medical image (e.g. MRI) processing, interacting with hospital data sources (currently only PACS) to collect data and public cloud offerings to process the data, orchestrating data transfers and processing pipelines. It offers mechanisms for visualizing the results and collaborating with other researchers.</figcaption></figure>
+<p>Medicine will be transformed by analytics on massive collections of medical data! Hospitals are limited computationally, companies are promoting cloud based data solutions for hospitals that lock out researchers and startups, and sharing of data with these organizations raise ethical concerns about medical data being controlled and exploited by these companies. In Boston, we have the opportunity to leverage our high concentration of world-class hospitals, computational resources and startups to pioneer this transformation in a way that leaves hospitals in control of their own data. We propose creating a regional hub where hospital data can be stored and shared and where tightly coupled computation services allow rapid Big Data analytics on that data. This hub will reduce hospital costs for secure storage and computation, simplify collaboration and democratize healthcare application development, and provide startups access to data while providing hospitals continued control over their data and value (e.g. revenue) for the data they choose to share.</p>
+<p>We are pooling our efforts to achieve the above-mentioned goals around the ChRIS Research Integration Service (ChRIS) framework. ChRIS is an infrastructure that initially started as an open source project at the Boston Children’s Hospital (BCH) to enable clinicians and researchers at BCH to extract data from the hospital Picture Archiving and Communication System (PACS) and securely perform analytics using high performance computing systems. With MOC-BCH-RH partnership, ChRIS infrastructure has been re-engineered, healthcare analytics application development using ChRIS has been standardized to use containers, support for third-party application development has been added along with the integration of an application/plugin hub, and ChRIS turned into a cloud service that can store data in object stores and execute computation on cloud systems.</p>
+<figure id="attachment928" style="width: 1034px" class="wp-caption alignright"><a href="../../files/2017/11/image3.png"><img src="../../files/2017/11/image3-1024x530.png" alt="Diagram: ChRIS architecture from MOC side" class="wp-image-928 size-large" width="1024" height="530" srcset="../../files/2017/11/image3-1024x530.png 1024w, ../../files/2017/11/image3-636x329.png 636w, ../../files/2017/11/image3-768x398.png 768w, ../../files/2017/11/image3.png 1522w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption class="wp-caption-text">Figure 2: Current ChRIS architecture from the MOC (public cloud) side with details of the spinned containers for execution indicated. A medical image processing request initiated via the ChRIS UI from the Boston Children&#8217;s Hospital (BCH) side is processed at the Massachusetts Open Cloud (MOC) OpenShift cluster (which sits on top of an OpenStack deployment). To separate application (image plugin) development from the intricacies of data management, we wrap image processing plugins between init and publish containers that handle interactions with the object store (Swift). This way, plugin developers can think and program as if their application is storing data to a regular file system, while in reality the data is stored in an object store (Swift) in a scalable manner.</figcaption></figure>
+<p>We plan to leverage the momentum behind the BCH, Red Hat, and MOC collaboration by integrating the following projects into ChRIS and use ChRIS as the founding block of our regional hub visions:</p>
+<ul>
+<li><span>Dataverse, developed by Harvard&#8217;s Institute for Quantitative Social Science (IQSS) enables researchers to share their datasets while keeping control of and gaining credit for their data. Harvard’s Dataverse repository (which will soon be hosted on the MOC) contains one of the largest collections of research data in the world. The integration into the MOC will enable users to compute on the data in-situ and support encrypting datasets with keys controlled by the users. </span></li>
+<li><span>Bolted, developed by the MOC (together with the USAF, IARPA, MIT LL, Red Hat and Two Sigma), enables users to rapidly allocate enclaves of physical computers that can be viewed as a secure on-demand extrusions of a hospital’s internal data center into the cloud.</span></li>
+<li><span>Conclave, developed at Boston University’s Software &amp; Application Innovation Lab (SAIL), enables efficient secure computation across data of different parties. Conclave exploits secure multi-party computation (MPC), a computationally intensive cryptographic technique that allows independent parties to jointly compute a shared result without revealing their private inputs to the computation. Conclave executes as much code as possible inside hospital controlled enclaves to reduce the use of expensive MPC between the enclaves. There is an ongoing effort on meshing Dataverse and Conclave on top of the MOC OpenShift platform (CICI: Trustworthy Computing on the Cloud NSF project).   </span></li>
+</ul>
+<p><span>Putting these elements together with the existing ChRIS/BCH/Red Hat/MOC collaboration, we envision hospitals uploading encrypted datasets into inexpensive cloud storage and exposing them using Dataverse. Hospitals will be able to, on-demand, use enclaves created using Bolted to analyze datasets that are only decrypted in hospital controlled (potentially HIPAA compliant) enclaves. Users can use Dataverse to discover and request access to datasets from other institutions; it is fully under the control of the data set owner to who and under what conditions such access will be granted.</span></p>
+<figure id="attachment929" style="width: 1034px" class="wp-caption alignright"><a href="../../files/2017/11/image2.png"><img src="../../files/2017/11/image2-1024x596.png" alt="Diagram: two hospitals sharing encrypted cloud data" class="wp-image-929 size-large" width="1024" height="596" srcset="../../files/2017/11/image2-1024x596.png 1024w, ../../files/2017/11/image2-636x370.png 636w, ../../files/2017/11/image2-768x447.png 768w, ../../files/2017/11/image2.png 1104w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption class="wp-caption-text">Figure 3: An envisioned example for two hospitals hosting encrypted data at the Cloud Dataverse and performing computation only on trusted secure enclaves in MOC. To be looked at together with next figure.</figcaption></figure>
+<p><span>Collaborators in different institutions will be able to use Conclave to perform analysis that spans multiple datasets, with the guarantee that patient information is never exposed to other parties and only the aggregated output is available to one or more identified parties. Medical startups will similarly be able be to request computation (as allowed by the hospitals) performed in enclaves controlled by the institutions but charged to the startups. Technology startups will be able to expose new algorithms, new hardware, and new services to the hospitals and have them integrated into the hospital controlled enclaves. The complex workflows to orchestrate all of this would be integrated into ChRIS, enabling researchers and clinicians that are not computer experts to take advantage of these new capabilities.</span></p>
+<figure id="attachment930" style="width: 879px" class="wp-caption alignright"><a href="../../files/2017/11/image1.png"><img src="../../files/2017/11/image1.png" alt="Diagram: trusted, secure, private computation in the cloud" class="wp-image-930 size-full" width="869" height="670" srcset="../../files/2017/11/image1.png 869w, ../../files/2017/11/image1-636x490.png 636w, ../../files/2017/11/image1-768x592.png 768w" sizes="(max-width: 869px) 100vw, 869px" /></a><figcaption class="wp-caption-text">Figure 4: Detailed workflow for performing trusted, secure, privacy-preserving computation over multiple datasets owned by multiple non-trusting entities using the Trustworthy Computation Framework being built on top of MOC. The framework ensures that the datasets are only processed on trusted enclaves, original data is never shared, and only the aggregated data is available to parties at the end of the computation.</figcaption></figure>
+<h3>Collaboration with Red Hat</h3>
+<p>Red Hat (RH) engineers started mentoring class projects around ChRIS in the second half of 2016, and RH became part of the project in 2017. RH views the ChRIS project as a high-profile showcasing opportunity to demonstrate the capabilities of the latest developments made on RH software. Deep RH expertise around containers/Docker/OCI, Kubernetes/OpenShift, container management/orchestration and open source community building made an immensely positive impact on the ChRIS project. We organized a very successful Hackathon to develop applications on ChRIS in March 2018 at RH Boston Office and the project was highlighted in a keynote at the Red Hat summit in San Francisco (<a href="https://www.dotmed.com/news/story/42972?p_begin=0"><span>1</span></a><span>,</span><a href="https://hitinfrastructure.com/news/red-hat-boston-childrens-collaborate-on-open-source-image-sharing"><span>2</span></a><span>,</span><a href="http://www.tfir.io/red-hat-is-now-helping-medical-practitioners/?utm_campaign=shareaholic&amp;utm_medium=twitter&amp;utm_source=socialnetwork"><span>3</span></a><span>,</span><a href="https://www.healthdatamanagement.com/news/boston-childrens-red-hat-develop-cloud-platform-for-images"><span>4</span></a><span>). The interest around the project is growing quickly especially around the hospital research organizations and a core reason for this growth is the open-source nature of ChRIS. </span></p>
+<h2>Project Team</h2>
+<h4><span>Red Hat</span></h4>
+
+	<div class="profile-listing">
+		<ul class="advanced">
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/sina-aminmansour/">
+					<figure><img width="150" height="150" src="../../files/2018/02/Sina_Profile_Image-1.jpg" alt="" /></figure>				<p class="profile-name">Sina Aminmansour</p>
+		<p class="profile-title">Senior Software Engineer</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/mairin-duffy/">
+					<figure><img width="118" height="150" src="../../files/2018/02/headshot-mo.jpg" alt="" /></figure>				<p class="profile-name">Máirín Duffy</p>
+		<p class="profile-title">Principal Interaction Designer</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/ravi-gudimelta/">
+					<figure><img width="150" height="150" src="../../files/2018/02/user-1.png" alt="" /></figure>				<p class="profile-name">Ravi Gudimelta</p>
+		<p class="profile-title">Software Engineer &#8211; OpenShift/Kubernetes</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/chloe-kaubisch/">
+					<figure><img width="150" height="150" src="../../files/2018/02/user-1.png" alt="" /></figure>				<p class="profile-name">Chloe Kaubisch</p>
+		<p class="profile-title">BU Year Round Intern</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/dan-mcpherson/">
+					<figure><img width="150" height="150" src="../../files/2018/02/492994.jpg" alt="" /></figure>				<p class="profile-name">Dan McPherson</p>
+		<p class="profile-title">Senior Principal Software Engineer</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/urvashi-mohnani/">
+					<figure><img width="150" height="150" src="../../files/2018/02/urvashi-1.jpg" alt="" /></figure>				<p class="profile-name">Urvashi Mohnani</p>
+		<p class="profile-title">Associate Software Engineer</p>	</a>
+</li>
+					</ul>
+	</div><!--/.profile-listing-->
+
+<h4><span>MOC Chris Team </span></h4>
+
+	<div class="profile-listing">
+		<ul class="advanced">
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/robert-baron/">
+					<figure><img width="150" height="150" src="../../files/2018/06/robertbaron.png" alt="" /></figure>				<p class="profile-name">Robert Baron</p>
+		<p class="profile-title">Sr. Software Engineer</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/parul-singh/">
+					<figure><img width="150" height="150" src="../../files/2018/06/parul.jpg" alt="" /></figure>				<p class="profile-name">Parul Singh</p>
+		<p class="profile-title">Software Engineer</p>	</a>
+</li>
+							
+<li class="has-title">
+	<a href="https://www.bu.edu/rhcollab/people/ata-turk/">
+					<figure><img width="104" height="150" src="../../files/2018/06/ata_funny-Ata-Turk-441x636.jpeg" alt="" /></figure>				<p class="profile-name">Ata Turk</p>
+		<p class="profile-title">Research Scientist</p>	</a>
+</li>
+					</ul>
+	</div><!--/.profile-listing-->
+
+<h4><span>BU SAIL team</span></h4>
+<ul>
+<li><span>Andrei Lapets</span></li>
+<li><span>Mayank Varia</span></li>
+<li><span>Ben Gatech</span></li>
+</ul>
+<h4><span>Harvard IQSS Dataverse Team</span></h4>
+<ul>
+<li><span>Merce Crosas</span></li>
+<li><span>Philip Durbin</span></li>
+</ul>
+<h2>Progress</h2>
+<ul>
+<li><span><strong>Jan 2018</strong> – ChRIS platform ready for initial plugin development</span></li>
+<li><span><strong>Mar 2018</strong> – First ChRIS plugin development hackathon (</span><a href="http://www.bu.edu/rhcollab/events/archive/chris-code-lab/"><span>ChRIS Code Lab</span></a><span>) </span></li>
+<li><span><strong>Apr 2018</strong> – ANTs image registration application parallelized and embedded as a ChRIS plugin </span></li>
+<li><span><strong>May 2018</strong> – First application demo using GPUs and TensorFlow on ChRIS OpenShift </span></li>
+<li><span><strong>May 2018</strong> – </span><a href="https://youtu.be/Ui-n-n_w8Ok?t=4892"><span>Keynote at Red Hat Summit on CHRIS</span></a><span>: Jim Whitehurst (RH CEO) and Ellen Grant (BCH head of FNNDSC) talking about ChRIS on the main stage</span></li>
+<li><span><strong>May 2018</strong> – </span><a href="https://www.youtube.com/watch?v=p1Y9wlPSgt4"><span>Tech talk at Red Hat Summit on ChRIS</span></a></li>
+</ul>
+<h3>Timeline</h3>
+<ul>
+<li><span><strong>Sep 2018</strong> – GPU support in ChRIS</span></li>
+<li><span><strong>Oct 2018</strong> – Cloud Dataverse support in ChRIS</span></li>
+<li><span><strong>Dec 2018</strong> – MPC support in ChRIS</span></li>
+</ul>
+<h2>Other Resources</h2>
+<h3>Planning and Getting Involved</h3>
+<ul>
+<li><strong>GitHub repo:</strong> <a href="https://github.com/redhat-university-partnerships/radiology"><span>https://github.com/redhat-university-partnerships/radiology</span></a></li>
+<li><strong>MOC:</strong> <a href="https://massopen.cloud/"><span>https://massopen.cloud/</span></a></li>
+</ul>
+<h3>Papers</h3>
+<ul>
+<li><span>Initial paper on ChRIS: R. Pienaar, A. Turk, J. Bernal-Rusiel, N. Rannou, D. Haehn, P. E. Grant and O. Krieger, CHIPS – A Service for Collecting, Organizing, Processing, and Sharing Medical Image Data in the Cloud, in VLDB DMAH, 2017. </span><a href="https://arxiv.org/abs/1710.00734"><span>https://arxiv.org/abs/1710.00734</span></a></li>
+</ul>
+<h3>News Items</h3>
+<p><a href="https://redhat.com/chris"><img src="../../files/2018/10/creatingchris.png" alt="" class="size-full wp-image-1527" width="900" height="254" srcset="../../files/2018/10/creatingchris.png 900w, ../../files/2018/10/creatingchris-636x179.png 636w, ../../files/2018/10/creatingchris-768x217.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+<h4>Creating ChRIS Video Series Launched</h4>
+<p><em>October 4, 2018</em> &#8211; Red Hat has released a series of videos about the ChRIS project called &#8220;<strong><a href="https://redhat.com/chris">Creating ChRIS</a></strong>.&#8221; These are a great resource to understand the background and the intent of this project! <a href="https://redhat.com/chris">Learn more</a>.</p>
+<div id="news-banner-project">
+<ul class="news_list category_23"><li class="post_1075">
+<div class="thumbnail"><img width="150" height="150" src="../../files/2018/07/Parul9-150x150.jpg" alt="Parul Singh" class="thumb" /></div>
+<span class="date">July 17, 2018</span>
+<h4 class="news_post_title"><a href="https://www.bu.edu/rhcollab/2018/07/17/an-inside-look-into-the-chris-project-from-a-students-perspective/">An Inside Look into the ChRIS Project from a Student’s Perspective</a></h4>
+<p class="excerpt">
+At first look Parul appears deceivingly shy. However, my first impression couldn’t... <a class="more" href="https://www.bu.edu/rhcollab/2018/07/17/an-inside-look-into-the-chris-project-from-a-students-perspective/">[ More ]</a></p>
+</li>
+
+<li class="post_960">
+<div class="thumbnail"><img width="150" height="150" src="../../files/2018/06/chris_interns-june22-150x150.jpg" alt="" class="thumb" /></div>
+<span class="date">June 24, 2018</span>
+<h4 class="news_post_title"><a href="https://www.bu.edu/rhcollab/2018/06/24/intern-presentation-series-chris-artificial-intelligence/">Intern Presentation Series: ChRIS &#038; Artificial Intelligence</a></h4>
+<p class="excerpt">Last Friday afternoon in Red Hat’s Boston office, Collaboratory interns came together... <a class="more" href="https://www.bu.edu/rhcollab/2018/06/24/intern-presentation-series-chris-artificial-intelligence/">[ More ]</a></p>
+</li>
+
+<li class="post_669">
+<div class="thumbnail"><img width="150" height="150" src="../../files/2018/06/ellen-jim-150x150.png" alt="" class="thumb" /></div>
+<span class="date">June 19, 2018</span>
+<h4 class="news_post_title"><a href="https://www.bu.edu/rhcollab/2018/06/19/chris-at-the-red-hat-summit/">ChRIS at the Red Hat Summit</a></h4>
+<p class="excerpt">"Ideas Worth Exploring" Keynote with Jim Whitehurst and Dr. Ellen Grant
+At the... <a class="more" href="https://www.bu.edu/rhcollab/2018/06/19/chris-at-the-red-hat-summit/">[ More ]</a></p>
+</li>
+
+<li class="post_559">
+<div class="thumbnail"><img width="150" height="150" src="../../files/2018/04/em_180327_bch_b_83-150x150.jpg" alt="Rudolph Pienaar stands at the front of a conference room at the ChRIS Code Lab, explaining how ChRIS works." class="thumb" /></div>
+<span class="date">April 30, 2018</span>
+<h4 class="news_post_title"><a href="https://www.bu.edu/rhcollab/2018/04/30/chris-code-lab-event-report/">ChRIS Code Lab Event Report</a></h4>
+<p class="excerpt">
+
+On March 27 and 28, the Collaboratory hosted a code lab event... <a class="more" href="https://www.bu.edu/rhcollab/2018/04/30/chris-code-lab-event-report/">[ More ]</a></p>
+</li>
+
+</ul>
+
+</div>
+<div id="simple-translate">
+<div>
+<div style="background-image: url('moz-extension://d23556ff-d54e-4b62-9da8-76f87744d8a2/icons/512.png'); height: 22px; width: 22px; top: 10px; left: 10px;" class="simple-translate-button "></div>
+<div class="simple-translate-panel " style="width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px; background-color: #ffffff;">
+<div class="simple-translate-result-wrapper" style="overflow: hidden;">
+<p class="simple-translate-candidate" style="color: #737373;">
+</div>
+</div>
+</div>
+</div>
+
+	
+	
+	
+	
+</article>
+
+	
+	<aside class="sidebar">
+		<div id="nav_menu-2" class="widget widget_nav_menu widget-2"><h3 class="widgetTitle">Join Our Community</h3><div class="menu-join-our-community-container"><ul id="menu-join-our-community" class="menu"><li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://www.bu.edu/rhcollab/events/calendar/">Come to a collaboratory event</a></li>
+<li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="http://www.bu.edu/rhcollab/get-involved/code-repositories/">Explore our code repositories</a></li>
+<li id="menu-item-1027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1027"><a href="https://www.bu.edu/rhcollab/get-involved/contact-us/">Contact us with your interest</a></li>
+</ul></div></div><div id="bu_pages-1" class="widget widget_bu_pages widget-3"><div id="contentnav"><h3 class="widgetTitle"><a class="content_nav_header" href="https://www.bu.edu/rhcollab/projects/">Projects</a>
+</h3><ul  id="contentnavlist">
+<li class="page_item page-item-190 first_item">
+<a class="level_1" href="https://www.bu.edu/rhcollab/projects/d3n/" title="Navigate to: Caching for Datacenters and Data Lakes">Caching for Datacenters and Data Lakes</a>
+ </li>
+<li class="page_item page-item-109 current_page_item">
+<a class="level_1 active" href="index.html" title="Navigate to: ChRIS Research Integration Service">ChRIS Research Integration Service</a>
+ </li>
+<li class="page_item page-item-952">
+<a class="level_1" href="https://www.bu.edu/rhcollab/projects/hil/" title="Navigate to: Hardware Isolation Layer (HIL)">Hardware Isolation Layer (HIL)</a>
+ </li>
+<li class="page_item page-item-947">
+<a class="level_1" href="https://www.bu.edu/rhcollab/projects/malleable-metal-as-a-service-m2/" title="Navigate to: Malleable Metal as a Service (M2)">Malleable Metal as a Service (M2)</a>
+ </li>
+<li class="page_item page-item-898">
+<a class="level_1" href="https://www.bu.edu/rhcollab/projects/linux-unikernels/" title="Navigate to: Linux Unikernels">Linux Unikernels</a>
+ </li>
+<li class="page_item page-item-902 last_item">
+<a class="level_1" href="https://www.bu.edu/rhcollab/projects/the-moc-openshift-service/" title="Navigate to: MOC OpenShift Service">MOC OpenShift Service</a>
+ </li>
+</ul>
+</div></div><div id="search-2" class="widget widget_search widget-6"><form id="quicksearch" action="https://www.bu.edu/rhcollab/" method="get">
+	<fieldset>
+		<legend>Search</legend>
+		<label for="q">Search in https://www.bu.edu/rhcollab/</label>
+		<input id="q" type="text" name="s" class="search" aria-label="Search" title="Search" placeholder="Search site&hellip;" value="" />
+		<input type="submit" value="Search" name="do_search" class="button">
+	</fieldset>
+</form>
+</div>	</aside>
+			</div><!-- .content-container -->
+
+		
+		</div><!-- .content -->
+	</div><!-- .wrapper -->
+
+	<footer class="siteFooter has-links" role="contentinfo">
+
+						
+		<div class="siteFooter-content">
+						<nav class="siteFooter-links" role="navigation"><ul id="siteFooter-links-menu" class="siteFooter-links-menu"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.bu.edu">Boston University</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://www.bu.edu/search">Search</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://www.bu.edu/directory">Directory</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="http://www.bu.edu/today/">BU Today</a></li>
+</ul></nav>					</div>
+
+	</footer>
+
+			<script type="text/javascript">
+		(function($) {
+
+			var ajaxurl = "https://www.bu.edu/rhcollab/wp-admin/admin-ajax.php";
+
+			if (jQuery('.sortable').length) {
+
+				var data = {
+					action: 'sortable_scripts'
+				};
+				$.post(ajaxurl, data, function(scripts) {
+					var s = document.getElementsByTagName('script')[0];
+					$(s).before(scripts);
+				});
+
+			}
+		})(jQuery);
+		</script>
+
+		<script type='text/javascript' src='../../wp-content/themes/responsive-framework/js/script.min.js%3Fver=1.5.9'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min.js%3Fver=4.9.10'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b19c58809e","applicationID":"7212547","transactionName":"YV1SNkUDWEQDBRdQDFgXcQFDC1lZTRYCXgY=","queueTime":0,"applicationTime":213,"atts":"TRpFQA0ZSxtAB0EDGEtF","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
